@@ -1,9 +1,7 @@
-<?doctype>
-  <head>
-    <meta charset="utf-8">
-  </head>
-  <body>
+@extends('layouts.default')
+@section('content')
     <h1>All Users</h1>
-    {{ dd($users->toArray()) }}
-  </body>
-</html>
+    @foreach ($users as $user)
+      <li>{{ link_to("users/{$user->username}", $user->username) }}</li>
+    @endforeach
+@stop
