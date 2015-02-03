@@ -7,7 +7,7 @@ Route::get('/users', function()
 {
   $user = new User;
   $user->username = 'harvardGuy';
-  $user->email = 'mahemail@aplace.com';
+  $user->email = 'mahemail2@aplace.com';
   $user->password = Hash::make('password');
   $user->save();
   return DB::table('users')->get();
